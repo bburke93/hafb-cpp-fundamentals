@@ -1,5 +1,10 @@
-#ifndef FACTOR_H_
-#define FACTOR_H_
+/*
+** EPITECH PROJECT, 2019
+** hafb-cpp-fundamentals
+** File description:
+** factor
+*/
 
+#pragma once
 
-#endif /* !FACTOR_H_ */
+void FactorMod3();

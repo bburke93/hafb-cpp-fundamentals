@@ -1,3 +1,10 @@
+## C++ Environment in Windows
+- VsCode        // editor
+- git           // for source control
+- cmake         // to work with project
+- g++ (mingw)   // compiler for windows. Add binaries to PATH
+- github        // for cloud service
+
 ## Terminal Commands 
 Note: ($ means terminal prompt):
 ```bash
@@ -7,11 +14,13 @@ $ cd   ..		# .. parent directory
 $ pwd           # show present working directory
 $ rm <name>     # remove/delete file/directory
 ```
+
 ## File System
 ``` bash
 .    # (one dot) present working directory
 ..   # (two dots) parent directory
 ```
+
 ## C++ Basics
 - File extension: `.cpp`
 
@@ -24,7 +33,7 @@ $ g++ main.cpp -o main
 $ ./main.exe
 ```
 
-### C++ File Template
+## C++ File Template
 ```cpp
 #include <iostream>
 using namespace std;
@@ -33,4 +42,16 @@ int main()
 {
     return 0;
 }
+```
+
+## Plugins and Doxygen documentation
+```cpp
+// Add C/C++ extension
+// Add Code Spell Extension
+// Add Doxygen Documentation Generator
+```
+
+```cpp
+To generate Doxygen documentation:
+// Run /** and <Enter>
 ```

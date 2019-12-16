@@ -1,7 +1,7 @@
 /**
  * @file my_array.cpp
  * @author your name (you@domain.com)
- * @brief Learn about C-Style arrays and C++ array container
+ * @brief Learn about C-Style arrays
  * @version 0.1
  * @date 2019-12-16
  * 

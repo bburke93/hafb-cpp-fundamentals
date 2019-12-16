@@ -8,11 +8,12 @@
  * @copyright Copyright (c) 2019
  * 
  */
-
 #include <iostream>
+#include "functions.h"  // "" are for local headers
 using namespace std;
 
-int main()
+// Function Definition
+void Hello()
 {
-    return 0;
+    cout << "Hello from Hello() function" << endl;
 }

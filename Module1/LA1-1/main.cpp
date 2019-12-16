@@ -15,5 +15,10 @@ int main()
     cout << "Enter your age: ";
     cin >> age;
     cout << "I see you are: " << age << endl;
+
+    // sizeof(): get the size of the variable
+    cout << "Integers are: " << sizeof(int) << " bytes." << endl;
+    cout << "Mine Integer value: " << INT32_MIN << 
+        " Max Integers value: " << INT32_MAX << " bytes." << endl;
     return 0;
 }

@@ -8,3 +8,4 @@
 #pragma once
 
 int Sum(int num1, int num2);
+int UpdateStep(int& step);

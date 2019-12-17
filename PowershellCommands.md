@@ -13,6 +13,8 @@ $ cd  <dest>  	# change directories
 $ cd   ..		# .. parent directory 
 $ pwd           # show present working directory
 $ rm <name>     # remove/delete file/directory
+
+$mkdir <name>   # create directory/folder
 ```
 
 ## File System
@@ -22,7 +24,8 @@ $ rm <name>     # remove/delete file/directory
 ```
 
 ## C++ Basics
-- File extension: `.cpp`
+- source files extension: `.cpp`
+- Header files extension: `.h`
 
 ## g++ Compiler for 1 file
 ```bash
@@ -69,3 +72,12 @@ int main()
 To generate Doxygen documentation:
 // Run /** and <Enter>
 ```
+
+### CMake
+To build a project we need all the
+rules to be set under `CMakeLists.txt`
+file.
+- Create a build folder: `$ mkdir build`
+- Go to the build dir: `$ cd build`
+- Run cmake: `$ cmake .. -G "MinGW Makefiles` The `..` is because your CMakeLists.txt is one folder up. 
+- Build or compile your code: `$ cmake --build .` The `.` is to build in your current directory.

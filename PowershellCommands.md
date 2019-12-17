@@ -79,5 +79,5 @@ rules to be set under `CMakeLists.txt`
 file.
 - Create a build folder: `$ mkdir build`
 - Go to the build dir: `$ cd build`
-- Run cmake: `$ cmake .. -G "MinGW Makefiles` The `..` is because your CMakeLists.txt is one folder up. 
+- Run cmake: `$ cmake .. -G "MinGW Makefiles"` The `..` is because your CMakeLists.txt is one folder up. 
 - Build or compile your code: `$ cmake --build .` The `.` is to build in your current directory.

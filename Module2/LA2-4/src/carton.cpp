@@ -13,6 +13,13 @@ Carton::Carton()
     length_ = 0;
 }
 
+Carton::Carton(double length, double width, double height)
+{
+    length_ = length;
+    width_ = width;
+    height_ = height;
+}
+
 double Carton::length()
 {
     return length_;

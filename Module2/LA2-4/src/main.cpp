@@ -1,7 +1,7 @@
 #include <iostream>
 #include <array>
 #include "carton.h"
-const int kMaxSize = 10;
+#include "carton_fileio.h"
 
 int main() 
 {
@@ -23,37 +23,27 @@ int main()
   box3.ShowInfo();
 
   // create an array of Cartons
-  std::array<Carton, kMaxSize> boxes;
+  std::array<Carton, kMaxArraySize> boxes;
 
   // add some valid elements to the array
   boxes[0] = Carton(12,41,52);
 
+  // Read data from file
+  std::string message;
+  int record_size = 0;
+
+  message = ReadDataFormatFromFile("../carton_data.txt", boxes, record_size);
+  std:: cout << message << "Records loaded: " << record_size << std::endl;
+
   // loop through the array
   std::cout << "\nPrinting Array: " << std::endl;
-  for(auto box : boxes) 
+  for(auto box = 0; box < record_size; ++box) 
   {
-    box.ShowInfo();
+    boxes[box].ShowInfo();
   }
 
-  // print out the volume of packages
-
-  // print out the girth of packages
-
-  // print out the length plus girth of packages
-
-  // check if package is sized to ship
-
-  // define a package that is too big to ship
-
-  // define a package that is too small to ship
-
-  // print if sized to ship
-
-  // write carton data and information
-
-  // read data from file
-
   // write data to file
+  WriteDataToFile("../carton_data.csv", boxes, record_size);
 
   return 0;
 }

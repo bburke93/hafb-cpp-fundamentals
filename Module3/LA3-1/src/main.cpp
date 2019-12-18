@@ -15,9 +15,11 @@ int main()
     ++c2;
     ++c2;
     c2++;
+    c2++;
     std::cout << "\nCounter 1: " << c1.count() << std::endl;
     std::cout << "Counter 2: " << c2.count() << std::endl;
     c1 = c2++;
     std::cout << "\nCounter 1: " << c1.count() << std::endl;
+    std::cout << "Counter 2: " << c2.count() << std::endl;
     return 0;
 }

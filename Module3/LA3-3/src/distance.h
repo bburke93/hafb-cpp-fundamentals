@@ -18,4 +18,6 @@ class Distance
 
         // Other Methods
         void ShowDist() const;
+
+        Distance operator + (Distance rhs) const;
 };

@@ -31,3 +31,10 @@ Distance Distance::operator + (Distance rhs) const
     }
     return Distance(feet, inches);
 }
+
+std::ostream &operator <<(std::ostream &os, const Distance& distance)
+{
+    // NOT to include a '\n or end;
+    os << "feet: " << distance.feet_ << " inches: " << distance.inches_;
+    return os;
+}

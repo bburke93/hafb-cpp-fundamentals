@@ -22,7 +22,7 @@ void Distance::ShowDist() const
  */
 Distance Distance::operator + (Distance rhs) const
 {
-    int feet = feet_ + rhs.feet;
+    int feet = feet_ + rhs.feet();
     float inches = inches_ + rhs.inches();
     if(inches > 12.0)
     {

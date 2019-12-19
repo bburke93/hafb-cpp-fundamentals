@@ -12,5 +12,8 @@ int main()
   Distance d3;
   // add two objects
   d3 = d1 + d2;
+
+  // Display info with std::cout
+  std::cout << d3 << std::endl;
   return 0;
 }

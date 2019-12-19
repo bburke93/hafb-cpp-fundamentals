@@ -38,10 +38,11 @@ Distance Distance::operator + (Distance rhs) const
     return Distance(feet, inches);
 }
 
-Distance Distance::operator - (Distance rhs) const
+// Distance Distance::operator - (Distance rhs) const
+Distance operator - (Distance lhs, Distance rhs) // friend operator
 {
-    int feet = feet_ - rhs.feet();
-    float inches = inches_ - rhs.inches();
+    int feet = lhs.feet_ - rhs.feet_;
+    float inches = lhs.inches_ - rhs.inches_;
     if(inches < 0)
     {
         feet--;
@@ -66,4 +67,20 @@ bool Distance::operator < (Distance rhs) const
 bool Distance::operator == (Distance rhs) const 
 {
     return ((feet_ * 12) + inches_) == ((rhs.feet() * 12) + rhs.inches());
+}
+
+Distance Distance::operator = (Distance& rhs)
+{
+    std::cout << "Assignment operator invoked!" << std::endl;
+    feet_ = rhs.feet_;
+    inches_ = rhs.inches_;
+    return Distance(feet_, inches_);
+}
+
+// Copy constructor
+Distance::Distance(const Distance& dist)
+{
+    std::cout << "Copy constructor invoked!" << std::endl;
+    feet_ = dist.feet_;
+    inches_ = dist.inches_;
 }

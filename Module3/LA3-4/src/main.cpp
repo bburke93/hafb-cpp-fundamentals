@@ -6,13 +6,10 @@ using namespace std;
 int main() 
 {
   Distance d1 = Distance(1, 6);
-  d1.ShowDist();
-
   Distance d2(3, 11);
-  Distance d3;
-
+  d1.ShowDist();
   // add two objects
-  d3 = d1 + d2;
+  Distance d3 = d1 + d2;
 
   // Display info with std::cout
   std::cout << d3 << std::endl;
@@ -30,12 +27,21 @@ int main()
   // Check == operator
   d1.update_distance(1,5);
   d2.update_distance(1,5);
-  
+
   if(d1 == d2)
   {
     std::cout << d1 << " is equal to "
       << d2 << std::endl;
   }
+
+  d2.update_distance(3,0);
+  d2 = d1;
+  std::cout << d2 << " and " << d1 << std::endl;
+  // Initialization IS NOT assignment
+  Distance d5 = d2;
+  std::cout << d5 << " and " << d2 << std::endl;
+  Distance d6(d2);
+  std::cout << d6 << " and " << d2 << std::endl;
   
   return 0;
 }
